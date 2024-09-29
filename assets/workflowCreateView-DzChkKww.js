@@ -1,1 +1,0 @@
-import{_ as t}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as e,b as c,i as _}from"./index-BxYcHpen.js";const n={};function a(r,o){return e(),c("h1",null,"Create A New Workflow")}const s=t(n,[["render",a]]),p={__name:"workflowCreateView",setup(r){return(o,f)=>(e(),_(s))}};export{p as default};
