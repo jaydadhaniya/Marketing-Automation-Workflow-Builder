@@ -1,7 +1,7 @@
 <template>
-    <workflow></workflow>
+  <workflow></workflow>
 </template>
 
 <script setup>
-    import workflow from '../components/workflow.vue'
+import workflow from '../components/workflow.vue'
 </script>

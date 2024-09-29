@@ -19,6 +19,7 @@ export default defineConfig({
       ]
     })
   ],
+  base: '/Marketing-Automation-Workflow-Builder/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

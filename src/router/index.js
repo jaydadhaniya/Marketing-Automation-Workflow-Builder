@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import workflowListView from '../views/workflowListView.vue'
+import workflowCreateView from '../views/workflowCreateView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -6,12 +8,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'Workflow List',
-      component: () => import('../views/workflowListView.vue')
+      component: workflowListView
     },
     {
       path: '/workflow/create',
       name: 'Create New Workflow',
-      component: () => import('../views/workflowCreateView.vue')
+      component: workflowCreateView
     }
   ]
 })

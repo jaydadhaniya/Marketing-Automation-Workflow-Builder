@@ -6,74 +6,74 @@ export const useWorkflowStore = defineStore('workflow', {
     return {
       columns: [
         {
-          title: "ID",
-          key: "readableId",
-          dataIndex: "readableId",
-          sorter: true,
+          title: 'ID',
+          key: 'readableId',
+          dataIndex: 'readableId',
+          sorter: true
         },
         {
-          title: "Name",
-          key: "name",
-          dataIndex: "name",
-          sorter: true,
+          title: 'Name',
+          key: 'name',
+          dataIndex: 'name',
+          sorter: true
         },
         {
-          title: "Description",
-          key: "description",
-          dataIndex: "description",
-          sorter: true,
+          title: 'Description',
+          key: 'description',
+          dataIndex: 'description',
+          sorter: true
         },
         {
-          title: "Entry Points",
-          key: "entryPoints",
-          sorter: true,
+          title: 'Entry Points',
+          key: 'entryPoints',
+          sorter: true
         },
         {
-          name: "sharing",
-          key: "sharing",
-          dataIndex: "sharing",
-          sorter: true,
+          name: 'sharing',
+          key: 'sharing',
+          dataIndex: 'sharing',
+          sorter: true
         },
         {
-          title: "Status",
-          key: "status",
-          sorter: true,
+          title: 'Status',
+          key: 'status',
+          sorter: true
         },
         {
-          name: "workflowType",
-          key: "workflowType",
-          sorter: true,
+          name: 'workflowType',
+          key: 'workflowType',
+          sorter: true
         },
         {
-          title: "Schedule DateTime",
-          key: "scheduledAt",
-          sorter: true,
+          title: 'Schedule DateTime',
+          key: 'scheduledAt',
+          sorter: true
         },
         {
-          title: "Date Started",
-          key: "startedAt",
-          sorter: true,
+          title: 'Date Started',
+          key: 'startedAt',
+          sorter: true
         },
         {
-          title: "",
-          key: "actions",
-        },
+          title: '',
+          key: 'actions'
+        }
       ],
       workflows: workflows
     }
   },
   getters: {
     workflowList: (state) => {
-      const workflows = JSON.parse(JSON.stringify(state.workflows));
-      let localWorkflows = localStorage.getItem('workflows') || [];
+      const workflows = JSON.parse(JSON.stringify(state.workflows))
+      let localWorkflows = localStorage.getItem('workflows') || []
       return [...workflows, ...localWorkflows]
     }
   },
   actions: {
     saveWorkflow(workflow) {
       // In real word here should be API call instead of setting item in local storage
-      let localWorkflows = localStorage.getItem('workflows');
-      localWorkflows.push(workflow);
+      let localWorkflows = localStorage.getItem('workflows')
+      localWorkflows.push(workflow)
     }
   }
 })
